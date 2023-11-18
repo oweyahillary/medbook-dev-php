@@ -1,0 +1,54 @@
+<div class="form-group">
+  <label for="name">Name of patient</label>
+  <input
+    type="text"
+    id="name"
+    [(ngModel)]="patient.name"
+    name="name"
+    class="form-control"
+  />
+</div>
+<div class="form-group">
+  <label for="dob">Date of Birth</label>
+  <input
+    type="date"
+    id="dob"
+    [(ngModel)]="patient.dob"
+    name="dob"
+    class="form-control"
+  />
+</div>
+<div class="form-group">
+  <label for="gender">Gender</label>
+  <select
+    id="gender"
+    [(ngModel)]="patient.gender"
+    name="gender"
+    class="form-control"
+  >
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="serviceType">Type of service</label>
+  <select
+    id="serviceType"
+    [(ngModel)]="patient.serviceType"
+    name="serviceType"
+    class="form-control"
+  >
+    <option value="Outpatient">Outpatient</option>
+    <option value="Inpatient">Inpatient</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="comments">General comments</label>
+  <textarea
+    id="comments"
+    [(ngModel)]="patient.comments"
+    name="comments"
+    class="form-control"
+  ></textarea>
+</div>
+<button (click)="savePatient()" class="btn btn-primary">Save</button>
